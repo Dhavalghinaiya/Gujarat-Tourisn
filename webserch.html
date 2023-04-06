@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>serch</title>
+            <style>
+                iframe{
+                    padding: 5px;
+                    margin-top: 20px;
+                    width: 99%;
+                    height: 650px;
+                    border: 1px solid gold;
+                    border-radius: 5px;
+                }
+            </style>
+        </head>
+        <body>
+            <form action="" method="post">
+                <div>
+                <label for="search">Let's serch Google :</label>
+                <input type="text" id="q" name="q" />
+                <button type="button" id="sq" onclick="updatelink()">Serch</button>
+                <br>
+                <div class="screen">
+                    <iframe src="https://www.google.com/search?igu=1" id ="searchq" onchange="updatelink()"> /</iframe>
+                </div>
+                </div>
+            </form>
+            
+        </body>
+        <script>
+            function updatelink(){
+                value = document.getElementById('q').value;
+                document.getElementById('searchq').src = 'https://www.google.com/search?igu=1&q='+value;
+                console.log("value");
+            }
+        </script>
+        </html>
